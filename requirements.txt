@@ -1,3 +1,1 @@
-requests
-django
-django_heroku
+flasks
