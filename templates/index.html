@@ -91,7 +91,7 @@
                 <br>
                 <br>
                 <br>
-                <h1 class="text_center">Rank</h1>
+                <h1 class="text_center">每日排名</h1>
                 <br>
                 <br>
                 <div class="btn-group btn-group-justified">
@@ -140,88 +140,31 @@
                 </div>
                 <br>
                 <br>
+
+
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Rank</th>
-                            <th>Lift</th>
-                            <th>Company</th>
-                            <th>Market Cap</th>
+                            <th>排名</th>
+                            <th>公司</th>
+                            <th>交易所</th>
+                            <th>幣值</th>
+                            <th>匯率</th>
+                            <th>市值</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <h1>{{rank_today_list[0]}}</h1>
+                        {% for i in rank_today_list %}
                         <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
+                            <td>{{ i[0] }}</td>
+                            <td>{{ i[2] }}</td>
+                            <td>{{ i[3] }}</td>
+                            <td>{{ i[4] }}</td>
+                            <td>{{ i[5] }}</td>
+                            <td>{{ i[6] }}</td>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>Amazon</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>Microsoft</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>Apple</td>
-                            <td>9435435435</td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
