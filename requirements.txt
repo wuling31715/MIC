@@ -2,4 +2,4 @@ gunicorn
 flask
 pandas
 requests
-
+BeautifulSoup
