@@ -110,8 +110,9 @@
                             <tr>
                                 <th>排名</th>
                                 <th>公司</th>
+                                <th>產業</th>
                                 <th>交易所</th>
-                                <th>幣值</th>
+                                <th>貨幣</th>
                                 <th>匯率</th>
                                 <th>市值</th>
                             </tr>
@@ -120,6 +121,7 @@
                             {% for i in rank_today_list %}
                             <tr>
                                 <td>{{ i[0] }}</td>
+                                <td>{{ i[1] }}</td>
                                 <td>{{ i[2] }}</td>
                                 <td>{{ i[3] }}</td>
                                 <td>{{ i[4] }}</td>
