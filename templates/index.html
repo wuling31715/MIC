@@ -48,16 +48,17 @@
         </div>
     </nav>
     <div class="container">
-        <div id="rank_link" class="col-lg-12">
-            <br>
-            <br>
-            <br>
-            <br>
-            <h1 class="text_center">每日排名</h1>
-            <h3 class="text_center">{{ today }}</h3>
-            <br>
-            <br>
-            <!-- <div class="btn-group btn-group-justified">
+        <div class="row">
+            <div id="rank_link" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 class="text_center">每日排名</h1>
+                <h3 class="text_center">{{ today }}</h3>
+                <br>
+                <br>
+                <!-- <div class="btn-group btn-group-justified">
                     <div class="btn-group">
                         <a type="button" class="btn btn-default dropdown-toggle disabled" data-toggle="dropdown">
                             Date
@@ -103,34 +104,34 @@
                 </div>
                 <br>
                 <br> -->
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>排名</th>
-                        <th>公司</th>
-                        <th>交易所</th>
-                        <th>幣值</th>
-                        <th>匯率</th>
-                        <th>市值</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for i in rank_today_list %}
-                    <tr>
-                        <td>{{ i[0] }}</td>
-                        <td>{{ i[2] }}</td>
-                        <td>{{ i[3] }}</td>
-                        <td>{{ i[4] }}</td>
-                        <td>{{ i[5] }}</td>
-                        <td>{{ i[6] }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <br>
-            <br>
-        </div>
-        <!-- <div id="bar_chart_h_link" class="col-lg-12">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th>排名</th>
+                                <th>公司</th>
+                                <th>交易所</th>
+                                <th>幣值</th>
+                                <th>匯率</th>
+                                <th>市值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in rank_today_list %}
+                            <tr>
+                                <td>{{ i[0] }}</td>
+                                <td>{{ i[2] }}</td>
+                                <td>{{ i[3] }}</td>
+                                <td>{{ i[4] }}</td>
+                                <td>{{ i[5] }}</td>
+                                <td>{{ i[6] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                <br>
+                <br>
+            </div>
+            <!-- <div id="bar_chart_h_link" class="col-lg-12">
                 <br>
                 <br>
                 <h1 class="text_center">Bar Chart H</h1>
@@ -241,6 +242,7 @@
                 <br>
                 <br>
             </div> -->
+        </div>
     </div>
     <div class="panel panel-default text_center footer">
         <div class="panel-footer">
