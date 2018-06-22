@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from data.read import Reader
+from data.download import Downloader
 import datetime, random
 
 app = Flask(__name__)
@@ -8,6 +9,10 @@ today = datetime.datetime.now().strftime("%Y/%m/%d")
 
 def get_date(date):
     return '%s/%s/%s' % (date[:4], date[4:6], date[6:8])
+
+@app.route("/download")
+def download():
+    Downloader.download_rank_csv()
 
 @app.route("/")
 def index():
@@ -18,7 +23,6 @@ def index():
         today = today,
         rank_today_list = rank_today_list[:101],
         )
-
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=port)
