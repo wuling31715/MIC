@@ -46,78 +46,78 @@ def market_cap_format(market_cap_str):
     market_cap_int = int(market_cap_str)
     return market_cap_int
 
-class Downloader:
+def main():
+    company = pd.read_csv('company.csv')
+    currency = pd.read_csv('currency.csv')
+    currency_name = currency['name']
+    currency_symbol = currency['symbol']
+    company_list = company.values.tolist()
 
-    @staticmethod
-    def download_rank_csv():
-        company = pd.read_csv('data/company.csv')
-        currency = pd.read_csv('data/currency.csv')
-        currency_name = currency['name']
-        currency_symbol = currency['symbol']
-        company_list = company.values.tolist()
-
-        for i, j in enumerate(company_list):
-            try:
-                name = j[0]
-                html = get_html(name)
-                market_cap, exchange = get_market_cap(html)
-                company_list[i].append(market_cap)
-                company_list[i].append(exchange)
-                print(company_list[i])
-            except:
-                company_list[i].append('')
-                company_list[i].append('')
-                print(company_list[i])
-
-        for i, j in enumerate(company_list):
+    for i, j in enumerate(company_list):
+        try:
+            name = j[0]
+            html = get_html(name)
+            market_cap, exchange = get_market_cap(html)
+            company_list[i].append(market_cap)
+            company_list[i].append(exchange)
+            print(company_list[i])
+        except:
             company_list[i].append('')
-            for k, l in enumerate(currency_name):
-                if l in j[-2]:
-                    company_list[i][-1] = currency_symbol[k]
-                    print(company_list[i])
-                    break
+            company_list[i].append('')
+            print(company_list[i])
 
-        for i, j in enumerate(company_list):
-            try:
-                company_list[i].append(get_currency_rate(j[-1], 'USD'))
+    for i, j in enumerate(company_list):
+        company_list[i].append('')
+        for k, l in enumerate(currency_name):
+            if l in j[-2]:
+                company_list[i][-1] = currency_symbol[k]
                 print(company_list[i])
-            except:
-                company_list[i].append(get_currency_rate2(j[-1], 'USD'))
-                print(company_list[i])
+                break
 
-        for i, j in enumerate(company_list):
-            try:
-                company_list[i].append(market_cap_format(j[2]))
-                print(company_list[i])
-            except:
-                company_list[i].append('')
-                print(company_list[i])
+    for i, j in enumerate(company_list):
+        try:
+            company_list[i].append(get_currency_rate(j[-1], 'USD'))
+            print(company_list[i])
+        except:
+            company_list[i].append(get_currency_rate2(j[-1], 'USD'))
+            print(company_list[i])
 
-        for i, j in enumerate(company_list):
-            try:
-                company_list[i].append(int(j[-1] * j[-2]))
-                print(company_list[i])
-            except:
-                company_list[i].append(0)
-                print(company_list[i])
+    for i, j in enumerate(company_list):
+        try:
+            company_list[i].append(market_cap_format(j[2]))
+            print(company_list[i])
+        except:
+            company_list[i].append('')
+            print(company_list[i])
 
-        df = pd.DataFrame(columns=['rank', 'name', 'industry', 'exchange', 'code', 'rate', 'market_cap'])
-        for i in company_list:
-            df = df.append({'name': i[0],
-                            'industry': i[1],
-                            'exchange': i[3],
-                            'code': i[4],
-                            'rate': i[5],
-                            'market_cap': i[-1],
-                        }, ignore_index=True)
+    for i, j in enumerate(company_list):
+        try:
+            company_list[i].append(int(j[-1] * j[-2]))
+            print(company_list[i])
+        except:
+            company_list[i].append(0)
+            print(company_list[i])
 
-        df = df.replace('', np.nan, regex=True)
-        df = df.sort_values(by=['market_cap'], ascending=False)
-        df = df.reset_index(drop=True)
-        df['rank'] = df.index + 1
-        df['market_cap'].astype('int')
-        df = df.replace(np.nan, '')
+    df = pd.DataFrame(columns=['rank', 'name', 'industry', 'exchange', 'code', 'rate', 'market_cap'])
+    for i in company_list:
+        df = df.append({'name': i[0],
+                        'industry': i[1],
+                        'exchange': i[3],
+                        'code': i[4],
+                        'rate': i[5],
+                        'market_cap': i[-1],
+                    }, ignore_index=True)
 
-        now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-        path = 'datasets/' + now + '.csv'
-        df.to_csv(path, index=False)
+    df = df.replace('', np.nan, regex=True)
+    df = df.sort_values(by=['market_cap'], ascending=False)
+    df = df.reset_index(drop=True)
+    df['rank'] = df.index + 1
+    df['market_cap'].astype('int')
+    df = df.replace(np.nan, '')
+
+    now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    path = 'datasets/' + now + '.csv'
+    df.to_csv(path, index=False)
+
+if __name__ == "__main__":
+    main()

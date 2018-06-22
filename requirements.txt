@@ -1,6 +1,3 @@
 gunicorn
 flask
 pandas
-requests
-beautifulsoup4
-forex_python
