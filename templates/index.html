@@ -28,74 +28,36 @@
 </style>
 
 <body data-spy="scroll" data-target="#myScrollspy">
-    <nav id="top" class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">MIC TOP 200</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">首頁</a>
             </div>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#rank">Daily Rank</a>
-                </li>
-                <li>
-                    <a href="#bar_chart_h_link">Bar Chart H</a>
-                </li>
-                <li>
-                    <a href="#bar_chart_link">Bar Chart</a>
-                </li>
-                <li>
-                    <a href="#line_chart_link">Line Chart</a>
-                </li>
-                <li>
-                    <a href="#pie_chart_link">Pie Chart</a>
-                </li>
-                <li>
-                    <a href="#radar_chart_link">Radar Chart</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#rank_link">每日排名</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="col-lg-2">
-            <nav id="myScrollspy">
-                <ul class="nav nav-pills nav-stacked">
-                    <li>
-                        <a href="#top">Top</a>
-                    </li>
-                    <li>
-                        <a href="#rank">Daily Rank</a>
-                    </li>
-                    <li>
-                        <a href="#bar_chart_h_link">Bar Chart H</a>
-                    </li>
-                    <li>
-                        <a href="#bar_chart_link">Bar Chart</a>
-                    </li>
-                    <li>
-                        <a href="#line_chart_link">Line Chart</a>
-                    </li>
-                    <li>
-                        <a href="#pie_chart_link">Pie Chart</a>
-                    </li>
-                    <li>
-                        <a href="#radar_chart_link">Radar Chart</a>
-                    </li>
-
-                </ul>
-            </nav>
-        </div>
-        <div class="col-lg-10">
-
-            <div id="rank" class="col-lg-12">
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1 class="text_center">每日排名</h1>
-                <h3 class="text_center">{{ today }}</h3>
-                <br>
-                <br>
-                <!-- <div class="btn-group btn-group-justified">
+    <div class="container">
+        <div id="rank_link" class="col-lg-12">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 class="text_center">每日排名</h1>
+            <h3 class="text_center">{{ today }}</h3>
+            <br>
+            <br>
+            <!-- <div class="btn-group btn-group-justified">
                     <div class="btn-group">
                         <a type="button" class="btn btn-default dropdown-toggle disabled" data-toggle="dropdown">
                             Date
@@ -141,34 +103,34 @@
                 </div>
                 <br>
                 <br> -->
-
-
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>排名</th>
-                            <th>公司</th>
-                            <th>交易所</th>
-                            <th>幣值</th>
-                            <th>匯率</th>
-                            <th>市值</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for i in rank_today_list %}
-                        <tr>
-                            <td>{{ i[0] }}</td>
-                            <td>{{ i[2] }}</td>
-                            <td>{{ i[3] }}</td>
-                            <td>{{ i[4] }}</td>
-                            <td>{{ i[5] }}</td>
-                            <td>{{ i[6] }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-            <div id="bar_chart_h_link" class="col-lg-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>公司</th>
+                        <th>交易所</th>
+                        <th>幣值</th>
+                        <th>匯率</th>
+                        <th>市值</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in rank_today_list %}
+                    <tr>
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[2] }}</td>
+                        <td>{{ i[3] }}</td>
+                        <td>{{ i[4] }}</td>
+                        <td>{{ i[5] }}</td>
+                        <td>{{ i[6] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <br>
+        </div>
+        <!-- <div id="bar_chart_h_link" class="col-lg-12">
                 <br>
                 <br>
                 <h1 class="text_center">Bar Chart H</h1>
@@ -278,9 +240,7 @@
                 <br>
                 <br>
                 <br>
-            </div>
-        </div>
-    </div>
+            </div> -->
     </div>
     <div class="panel panel-default text_center footer">
         <div class="panel-footer">
