@@ -38,7 +38,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#rank_link">每日排名</a>
+                        <a href="#rank_link">市值排名</a>
                     </li>
                 </ul>
             </div>
@@ -51,56 +51,38 @@
                 <br>
                 <br>
                 <br>
-                <h1 class="text_center">每日排名</h1>
-                <h3 class="text_center">{{ today }}</h3>
+                <h1 class="text_center">市值排名</h1>
+                <h3 class="text_center">{{ rank_list[0][0] }}</h3>
                 <br>
                 <br>
-                <!-- <div class="btn-group btn-group-justified">
+                <div class="btn-group btn-group-justified">
                     <div class="btn-group">
-                        <a type="button" class="btn btn-default dropdown-toggle disabled" data-toggle="dropdown">
-                            Date
+                        <a type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            日期
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
+                            {% for i in rank_list %}
                             <li>
-                                <a href="#">Tablet</a>
+                                <a href="#rank_link" onclick="test('{{ i[0] }}')">{{ i[0] }}</a>
                             </li>
-                            <li>
-                                <a href="#">Smartphone</a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="btn-group">
-                        <a type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            Company
+                        <a type="button" class="btn btn-default dropdown-toggle disabled" data-toggle="dropdown">
+                            產業
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="#">Test</a>
                             </li>
-                            <li>
-                                <a href="#">Smartphone</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <a type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            Industry
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="#">Tablet</a>
-                            </li>
-                            <li>
-                                <a href="#">Smartphone</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
                 <br>
-                <br> -->
+                <br>
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
@@ -255,6 +237,11 @@
         </div>
     </div>
 </body>
+<script>
+    function test(a) {
+        alert(a)
+    }
+</script>
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script> -->

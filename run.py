@@ -11,11 +11,13 @@ def get_date(date):
 
 @app.route("/")
 def index():
-    rank_list = Reader.get_rank_list()
-    rank_today_list = max(rank_list)    
+    rank_list = Reader.get_rank_list()[::-1]
+    rank_today_list = max(rank_list)[1:]
+    for i, j in enumerate(rank_list):
+        rank_list[i][0] = get_date(str(j[0]))
     return render_template(
         'index.html', 
-        today = today,
+        rank_list = rank_list,
         rank_today_list = rank_today_list[:101],
         )
 
