@@ -9,15 +9,18 @@ from forex_python.converter import CurrencyRates
 
 def get_html(company_name):
     url = 'https://www.google.com.tw/search'
-    keyword = {'q': company_name + ' stock'}
+    if (company_name == 'NetApp') or (company_name == 'Asustek Computer'):
+        keyword = {'q': '%s stock price today' % company_name}
+    else:
+        keyword = {'q': '%s stock' % company_name}
     html = requests.get(url, params=keyword).text
     return html
 
 def get_market_cap(html):
     soup = BeautifulSoup(html, 'html.parser')
     market_cap = soup.findAll("td", {"align": "right"})[-1].text
-    place = soup.findAll("h3", {"class": "r"})[0].find('span').text
-    return market_cap, place
+    exchange = soup.findAll("h3", {"class": "r"})[0].find('span').text
+    return market_cap, exchange
 
 def get_currency_rate(x, y):
     if x == '':
@@ -40,6 +43,7 @@ def get_currency_rate2(x, y):
 
 def market_cap_format(market_cap_str):
     market_cap_str = market_cap_str.replace('.', '')
+    market_cap_str = market_cap_str.replace(',', '')
     market_cap_str = market_cap_str.replace('萬', '0' * 4)
     market_cap_str = market_cap_str.replace('億', '0' * 8)
     market_cap_str = market_cap_str.replace('兆', '0' * 12)
