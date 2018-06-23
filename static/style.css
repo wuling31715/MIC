@@ -1,0 +1,19 @@
+.hidden {
+    visibility: hidden;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.text_center {
+    text-align: center;
+}
+
+ul.nav-pills {
+    top: 180px;
+    position: fixed;
+}
+
+.footer {
+    margin-bottom: 0px;
+}
