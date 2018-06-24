@@ -19,7 +19,8 @@ class Reader:
         file_name_list = list()
         file_list = list()
         for i in os.listdir(path):
-            file_name_list.append(get_file_name(i))
+            if '.csv' in i:
+                file_name_list.append(get_file_name(i))
         file_name_list = sorted(file_name_list)
         for i in file_name_list:
             file = read_df(str(i))
