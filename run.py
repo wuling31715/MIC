@@ -8,7 +8,7 @@ def get_date(date):
 app = Flask(__name__)
 port = random.randrange(1000, 9999)
 all_rank_list = Reader.get_rank_list()[::-1]
-date_max = get_date(str(max(all_rank_list)[0]))
+date_max = get_date(str(all_rank_list[0][0]))
 today = datetime.datetime.now().strftime("%Y/%m/%d")
 industry_list = ['全部', '資訊硬體', '電商', '網路服務', '軟體', '半導體', '電信', '通訊設備', '材料', '工業', '電子', '機電設備', '資訊服務', '儲存']
 date_list = list()
@@ -43,6 +43,7 @@ def index():
         date = date,
         date_list = date_list,
         rank_list = rank_list,
+        industry = industry,
         industry_list = industry_list,
         )
 
@@ -56,6 +57,7 @@ def rank_query():
         date = date,
         date_list = date_list,
         rank_list = rank_list,
+        industry = industry,
         industry_list = industry_list,
         )
 
