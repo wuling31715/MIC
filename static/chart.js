@@ -1,45 +1,44 @@
-function rank_query(id) {
+function top100_query(id) {
+    document.getElementById(id).click();
+};
+
+function query(id) {
     document.getElementById(id).click();
 };
 
 function fill_form(id, content) {
-    document.getElementById(id).value = content;   
+    document.getElementById(id).value = content; 
 }
 
 function dropdown_select(id, content) {
     document.getElementById(id).innerHTML = content + ' <span class="caret"></span>';
 };
 
-
 var scroll = new SmoothScroll('a[href*="#"]');
 
-new Chart(document.getElementById("bar_chart_h"), {
+new Chart(document.getElementById("top100_chart"), {
     type: 'horizontalBar',
     data: {
-        labels: ["Apple", "Alphabet", "Microsoft", "Amazon", "Facebook"],
+        labels: company_name_array,
         datasets: [{
-            label: "Population (millions)",
-            data: [2478, 1267, 934, 784, 433],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ]
+            label: "",
+            data: market_cap_array,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
         }]
     },
     options: {
+        responsive: true,
+        maintainAspectRatio: true,
         legend: {
             display: false
         },
         title: {
             display: true,
-            text: 'Predicted world population (millions) in 2050'
-        }
+            text: '',
+        },
     }
 });
+
 var ctx = document.getElementById("bar_chart");
 var myChart = new Chart(ctx, {
     type: 'bar',

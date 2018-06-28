@@ -33,11 +33,31 @@ def get_rank_list(date, industry):
                         rank_list.append(j)
         return rank_list[:200]
 
+def get_top100_rank_list(date, industry):
+    company_name_list = list()
+    market_cap_list = list()
+    if industry == '全部':
+        for i in all_rank_list:
+            if i[0] == date:
+                for j in i[1:]:
+                    company_name_list.append(j[1])
+                    market_cap_list.append(j[-1])
+        return company_name_list[:100], market_cap_list[:100]
+    else:
+        for i in all_rank_list:
+            if i[0] == date:
+                for j in i[1:]:
+                    if j[2] == industry:
+                        company_name_list.append(j[1])
+                        market_cap_list.append(j[-1])
+        return company_name_list[:100], market_cap_list[:100]
+
 @app.route("/")
 def index():
     date = date_max
     industry = '全部'
     rank_list = get_rank_list(date, industry)
+    company_name_list, market_cap_list = get_top100_rank_list(date, industry)
     return render_template(
         'index.html', 
         date = date,
@@ -45,20 +65,27 @@ def index():
         rank_list = rank_list,
         industry = industry,
         industry_list = industry_list,
+        company_name_list = company_name_list,
+        market_cap_list = market_cap_list,
         )
 
-@app.route("/rank_query", methods=['POST', 'GET'])
-def rank_query():
+@app.route("/query", methods=['POST', 'GET'])
+def query():
     date = request.args.get('date')
     industry = request.args.get('industry')
+    anchor = request.args.get('anchor')
     rank_list = get_rank_list(date, industry)
+    company_name_list, market_cap_list = get_top100_rank_list(date, industry)
     return render_template(
         'index.html', 
+        anchor = anchor,
         date = date,
         date_list = date_list,
         rank_list = rank_list,
         industry = industry,
         industry_list = industry_list,
+        company_name_list = company_name_list,
+        market_cap_list = market_cap_list,
         )
 
 

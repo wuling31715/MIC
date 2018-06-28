@@ -28,6 +28,12 @@
                     <li>
                         <a href="#rank_link">市值排名</a>
                     </li>
+                    <li>
+                        <a href="#top100_link">全球百大</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#top100_market_cap_link">全球百大資產</a>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -42,16 +48,24 @@
                 <h1 class="text_center">市值排名</h1>
                 <br>
                 <br>
+                <div class="hidden">
+                    <form action="/query" method="get" id="rank_form">
+                        <input type="text" name="date" id="rank_date_input" value="{{ date }}">
+                        <input type="text" name="industry" id="rank_industry_input" value="{{ industry }}">
+                        <input type="text" name="anchor" id="rank_anchor_input" value="{{ anchor }}">
+                        <input type="submit" value="submit" id="rank_submit_input">
+                    </form>
+                </div>                
                 <div class="btn-group btn-group-justified">
                     <div class="btn-group">
-                        <a value="ewf" type="button" id="rank_date_button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <a type="button" id="rank_date_button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             {{ date }}
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             {% for i in date_list %}
                             <li>
-                                <a class="pointer" onclick="dropdown_select('rank_date_button', '{{ i }}'); fill_form('rank_date_input', '{{ i }}')">{{ i }}</a>
+                                <a class="pointer" onclick="dropdown_select('rank_date_button', '{{ i }}'); fill_form('rank_date_input', '{{ i }}'); fill_form('rank_anchor_input', 'rank_link'); query('rank_submit_input')">{{ i }}</a>
                             </li>
                             {% endfor %}
                         </ul>
@@ -64,24 +78,12 @@
                         <ul class="dropdown-menu" role="menu">
                             {% for i in industry_list %}
                             <li>
-                                <a class="pointer" onclick="dropdown_select('rank_industry_button', '{{ i }}'); fill_form('rank_industry_input', '{{ i }}')">{{ i }}</a>
+                                <a class="pointer" onclick="dropdown_select('rank_industry_button', '{{ i }}'); fill_form('rank_industry_input', '{{ i }}'); fill_form('rank_anchor_input', 'rank_link'); query('rank_submit_input')">{{ i }}</a>
                             </li>
                             {% endfor %}
                         </ul>
                     </div>
-                    <div class="btn-group">
-                        <a class="btn btn-default dropdown-toggle" onclick="rank_query('rank_submit_input')">查詢
-                        </a>
-                    </div>
                 </div>
-                <div class="hidden">
-                    <form action="/rank_query" method="get" id="rank_form">
-                        <input type="text" name="date" id="rank_date_input" value="{{ date }}">
-                        <input type="text" name="industry" id="rank_industry_input" value="{{ industry }}">
-                        <input type="submit" value="submit" id="rank_submit_input">
-                    </form>
-                </div>
-
                 <br>
                 <br>
                 <div id="rank_table_id" class="table-responsive">
@@ -112,9 +114,60 @@
                         </tbody>
                     </table>
                 </div>
-
                 <br>
                 <br>
+                <div id="top100_link" class="col-lg-12">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="text_center">全球百大</h1>
+                    <br>
+                    <br>
+                    <div class="hidden">
+                        <form action="/query" method="get" id="top100_form">
+                            <input type="text" name="date" id="top100_date_input" value="{{ date }}">
+                            <input type="text" name="industry" id="top100_industry_input" value="{{ industry }}">
+                            <input type="text" name="anchor" id="top100_anchor_input" value="{{ anchor }}">
+                            <input type="submit" value="submit" id="top100_submit_input">
+                        </form>
+                    </div>
+                    <div class="btn-group btn-group-justified">
+                        <div class="btn-group">
+                            <a type="button" id="top100_date_button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                {{ date }}
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                {% for i in date_list %}
+                                <li>
+                                    <a class="pointer" onclick="dropdown_select('top100_date_button', '{{ i }}'); fill_form('top100_date_input', '{{ i }}'); fill_form('top100_anchor_input', 'top100_link'); query('top100_submit_input')">{{ i }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <a type="button" id="top100_industry_button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                {{ industry }}
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                {% for i in industry_list %}
+                                <li>
+                                    <a class="pointer" onclick="dropdown_select('top100_industry_button', '{{ i }}'); fill_form('top100_industry_input', '{{ i }}'); fill_form('top100_anchor_input', 'top100_link'); query('top100_submit_input')">{{ i }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <canvas id="top100_chart" height="1000"></canvas>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </div>
         </div>
     </div>
@@ -128,6 +181,23 @@
         </div>
     </div>
 </body>
+<script>
+    {% if anchor %}
+    $(document).ready(function () {
+        window.location = '#{{ anchor }}'
+    }); 
+    {% endif %}
+</script>
+<script>
+    var company_name_array = [];
+    var market_cap_array = [];
+    {% for i in company_name_list %}
+        company_name_array.push('{{ i }}');
+    {% endfor %}
+    {% for i in market_cap_list %}
+        market_cap_array.push('{{ i }}');
+    {% endfor %}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="static/chart.js"></script>
