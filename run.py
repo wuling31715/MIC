@@ -88,6 +88,5 @@ def query():
         market_cap_list = market_cap_list,
         )
 
-
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=port)
