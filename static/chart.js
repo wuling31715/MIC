@@ -1,5 +1,3 @@
-alert(324)
-
 function query(id) {
     document.getElementById(id).click();
 };
