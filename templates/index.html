@@ -26,10 +26,13 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#rank_link">市值排名</a>
+                        <a href="#rank_link">全球百大</a>
                     </li>
                     <li>
-                        <a href="#top100_link">全球百大</a>
+                        <a href="#rank_market_cap_link">市值排行</a>
+                    </li>
+                    <li>
+                        <a href="#rank_industry_link">產業排行</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +45,7 @@
                 <br>
                 <br>
                 <br>
-                <h1 class="text_center">市值排名</h1>
+                <h1 class="text_center">全球百大</h1>
                 <br>
                 <br>
                 <div class="hidden">
@@ -109,53 +112,48 @@
                 </div>
                 <br>
                 <br>
-                <div id="top100_link" class="col-lg-12">
+                <div id="rank_market_cap_link" class="col-lg-12">
                     <br>
                     <br>
                     <br>
                     <br>
-                    <h1 class="text_center">全球百大</h1>
+                    <h1 class="text_center">市值排行</h1>
                     <br>
                     <br>
-                    <div class="hidden">
-                        <form action="/query" method="get" id="top100_form">
-                            <input type="text" name="date" id="top100_date_input" value="{{ date }}">
-                            <input type="text" name="industry" id="top100_industry_input" value="{{ industry }}">
-                            <input type="text" name="anchor" id="top100_anchor_input" value="{{ anchor }}">
-                            <input type="submit" value="submit" id="top100_submit_input">
-                        </form>
-                    </div>
                     <div class="btn-group btn-group-justified">
                         <div class="btn-group">
-                            <a type="button" id="top100_date_button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                {{ date }}
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                {% for i in date_list %}
-                                <li>
-                                    <a class="pointer" onclick="dropdown_select('top100_date_button', '{{ i }}'); fill_form('top100_date_input', '{{ i }}'); fill_form('top100_anchor_input', 'top100_link'); query('top100_submit_input')">{{ i }}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <div class="btn-group">
-                            <a type="button" id="top100_industry_button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                {{ industry }}
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                {% for i in industry_list %}
-                                <li>
-                                    <a class="pointer" onclick="dropdown_select('top100_industry_button', '{{ i }}'); fill_form('top100_industry_input', '{{ i }}'); fill_form('top100_anchor_input', 'top100_link'); query('top100_submit_input')">{{ i }}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
+                                <a type="button" id="rank_date_button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    {{ date }}
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    {% for i in date_list %}
+                                    <li>
+                                        <a class="pointer" onclick="dropdown_select('rank_date_button', '{{ i }}'); fill_form('rank_date_input', '{{ i }}'); fill_form('rank_anchor_input', 'rank_market_cap_link'); query('rank_submit_input')">{{ i }}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                        </div>                                                
                     </div>
                     <br>
                     <br>
-                    <canvas id="top100_chart" height="1000"></canvas>
+                    <canvas id="rank_market_cap_chart" height="1000"></canvas>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <div id="rank_industry_link" class="col-lg-12">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="text_center">產業排行</h1>
+                    <br>
+                    <br>
+                    <canvas id="rank_industry_chart" height="150"></canvas>
                     <br>
                     <br>
                     <br>
@@ -184,12 +182,70 @@
 <script>
     var company_name_array = [];
     var market_cap_array = [];
+    var date_array = [];
+    var industry0_array = [],
+        industry1_array = [],
+        industry2_array = [],
+        industry3_array = [],
+        industry4_array = [],
+        industry5_array = [],
+        industry6_array = [],
+        industry7_array = [],
+        industry8_array = [],
+        industry9_array = [],
+        industry10_array = [],
+        industry11_array = [],
+        industry12_array = [];
+
     {% for i in company_name_list %}
         company_name_array.push('{{ i }}');
     {% endfor %}
     {% for i in market_cap_list %}
         market_cap_array.push('{{ i }}');
     {% endfor %}
+    {% for i in date_list[::-2] %}
+        date_array.push('{{ i }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry0_array.push('{{ i.0 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry1_array.push('{{ i.1 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry2_array.push('{{ i.2 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry3_array.push('{{ i.3 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry4_array.push('{{ i.4 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry5_array.push('{{ i.5 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry6_array.push('{{ i.6 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry7_array.push('{{ i.7 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry8_array.push('{{ i.8 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry9_array.push('{{ i.9 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry10_array.push('{{ i.10 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry11_array.push('{{ i.11 }}');
+    {% endfor %}
+    {% for i in industry_market_cap_list[::-2] %}
+        industry12_array.push('{{ i.12 }}');
+    {% endfor %}
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
