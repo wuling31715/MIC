@@ -1,4 +1,4 @@
-alert('2343')
+alert('2343');
 
 function query(id) {
     document.getElementById(id).click();
