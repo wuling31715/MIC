@@ -34,7 +34,6 @@ var rank_market_cap_chart = new Chart(document.getElementById("rank_market_cap_c
         },
     }
 });
-
 var rank_industry_chart = new Chart(document.getElementById("rank_industry_chart"), {
     type: 'bar',
     data: {
