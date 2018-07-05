@@ -179,22 +179,23 @@
     {% endif %}
 </script>
 <script>
+    alert('0');
     var company_name_array = [];
     var market_cap_array = [];
     var date_array = [];
-    var industry0_array = [],
-        industry1_array = [],
-        industry2_array = [],
-        industry3_array = [],
-        industry4_array = [],
-        industry5_array = [],
-        industry6_array = [],
-        industry7_array = [],
-        industry8_array = [],
-        industry9_array = [],
-        industry10_array = [],
-        industry11_array = [],
-        industry12_array = [];
+    var industry0_array = [];
+    var industry1_array = [];
+    var industry2_array = [];
+    var industry3_array = [];
+    var industry4_array = [];
+    var industry5_array = [];
+    var industry6_array = [];
+    var industry7_array = [];
+    var industry8_array = [];
+    var industry9_array = [];
+    var industry10_array = [];
+    var industry11_array = [];
+    var industry12_array = [];
 
     {% for i in company_name_list %}
         company_name_array.push('{{ i }}');
@@ -244,6 +245,8 @@
     {% for i in industry_market_cap_list[::-2] %}
         industry12_array.push('{{ i.12 }}');
     {% endfor %}
+    alert('1');
+    
 
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
