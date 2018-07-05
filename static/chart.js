@@ -1,4 +1,3 @@
-alert(2)
 function query(id) {
     document.getElementById(id).click();
 };
@@ -117,4 +116,3 @@ var rank_industry_chart = new Chart(document.getElementById("rank_industry_chart
         },
     }
 });
-alert(3)
