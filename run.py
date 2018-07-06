@@ -54,9 +54,9 @@ def get_market_cap_list(date, industry):
 
 def get_industry_market_cap_list():
     industry_market_cap_list = list()
-    for i in industry_list:
+    for i in industry_list[1:]:
         tmp = list()
-        for j in date_list[1:]:
+        for j in date_list:
             tmp.append(sum(get_market_cap_list(j, i)[1]))
         industry_market_cap_list.append(tmp)        
     return industry_market_cap_list
@@ -66,6 +66,7 @@ date_max = get_date(str(all_rank_list[0][0]))
 today = datetime.datetime.now().strftime("%Y/%m/%d")
 industry_list = ['全部', '資訊硬體', '電商', '網路服務', '軟體', '半導體', '電信', '通訊設備', '材料', '工業', '電子', '機電設備', '資訊服務', '儲存']
 date_list = get_date_list()
+industry_market_cap_list = get_industry_market_cap_list()[::-1]
 
 @app.route("/")
 def index():
@@ -73,7 +74,6 @@ def index():
     industry = '全部'
     rank_list = get_rank_list(date, industry)
     company_name_list, market_cap_list = get_market_cap_list(date, industry)
-    industry_market_cap_list = get_industry_market_cap_list()
     return render_template(
         'index.html', 
         date = date,
@@ -93,7 +93,6 @@ def query():
     anchor = request.args.get('anchor')
     rank_list = get_rank_list(date, industry)
     company_name_list, market_cap_list = get_market_cap_list(date, '全部')
-    industry_market_cap_list = get_industry_market_cap_list()
     return render_template(
         'index.html', 
         anchor = anchor,

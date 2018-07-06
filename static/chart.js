@@ -106,7 +106,7 @@ var rank_industry_chart = new Chart(document.getElementById("rank_industry_chart
             yAxes: [{
                stacked: true,
                ticks: {
-                max: 4000000000000000,
+                // max: 4000000000000000,
             }
             }]
         },
