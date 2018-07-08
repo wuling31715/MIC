@@ -1,11 +1,10 @@
-
 function query(id) {
     document.getElementById(id).click();
 };
 
 function fill_form(id, content) {
     document.getElementById(id).value = content; 
-}
+};
 
 function dropdown_select(id, content) {
     document.getElementById(id).innerHTML = content + ' <span class="caret"></span>';
