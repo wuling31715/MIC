@@ -66,6 +66,7 @@ date_max = get_date(str(all_rank_list[0][0]))
 today = datetime.datetime.now().strftime("%Y/%m/%d")
 industry_list = ['全部', '資訊硬體', '電商', '網路服務', '軟體', '半導體', '電信', '通訊設備', '材料', '工業', '電子', '機電設備', '資訊服務', '儲存']
 date_list = get_date_list()
+season_list = date_list[::(len(date_list) // 4)][:4]
 industry_market_cap_list = get_industry_market_cap_list()
 
 @app.route("/")
@@ -84,6 +85,7 @@ def index():
         company_name_list = company_name_list,
         market_cap_list = market_cap_list,
         industry_market_cap_list = industry_market_cap_list,
+        season_list = season_list,
         )
 
 @app.route("/query", methods=['POST', 'GET'])
@@ -104,6 +106,7 @@ def query():
         company_name_list = company_name_list,
         market_cap_list = market_cap_list,
         industry_market_cap_list = industry_market_cap_list,
+        season_list = season_list,
         )
 
 if __name__ == "__main__":

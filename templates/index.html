@@ -32,8 +32,14 @@
                         <a href="#rank_market_cap_link">市值排行</a>
                     </li>
                     <li>
-                        <a href="#rank_industry_link">產業排行</a>
+                        <a href="#rank_industry_link">產業分析</a>
                     </li>
+                    <li>
+                        <a href="#rank_industry_compare_link">產業變化</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">產業趨勢</a>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -150,10 +156,26 @@
                     <br>
                     <br>
                     <br>
-                    <h1 class="text_center">產業排行</h1>
+                    <h1 class="text_center">產業分析</h1>
                     <br>
                     <br>
                     <canvas id="rank_industry_chart" height="150"></canvas>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <div id="rank_industry_compare_link" class="col-lg-12">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="text_center">產業變化</h1>
+                    <br>
+                    <br>
+                    <canvas id="rank_industry_compare_chart" height="150"></canvas>
                     <br>
                     <br>
                     <br>
@@ -183,6 +205,7 @@
     var company_name_array = [];
     var market_cap_array = [];
     var date_array = [];
+    var season_array = [];
     var industry0_array = [];
     var industry1_array = [];
     var industry2_array = [];
@@ -205,6 +228,9 @@
     {% endfor %}
     {% for i in date_list[::-1] %}
         date_array.push('{{ i }}');
+    {% endfor %}
+    {% for i in season_list[::-1] %}
+        season_array.push('{{ i }}');
     {% endfor %}
     {% for i in industry_market_cap_list[0] %}
         industry0_array.push({{ i }});
