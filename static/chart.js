@@ -196,3 +196,5 @@ var rank_industry_compare_chart = new Chart(document.getElementById("rank_indust
         },
     }
 });
+
+alert(213);
