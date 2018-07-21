@@ -26,7 +26,7 @@ var rank_market_cap_chart = new Chart(document.getElementById("rank_market_cap_c
         responsive: true,
         maintainAspectRatio: true,
         legend: {
-            display: true,
+            display: false,
         },
         title: {
             display: true,
