@@ -42,7 +42,7 @@ def get_market_cap_list(date, industry):
                 for j in i[1:]:
                     company_name_list.append(j[1])
                     market_cap_list.append(j[-1])
-        return company_name_list[:100], market_cap_list[:100]
+        return company_name_list[:200], market_cap_list[:200]
     else:
         for i in all_rank_list:
             if i[0] == date:
@@ -50,7 +50,20 @@ def get_market_cap_list(date, industry):
                     if j[2] == industry:
                         company_name_list.append(j[1])
                         market_cap_list.append(j[-1])
-        return company_name_list[:100], market_cap_list[:100]
+        return company_name_list[:200], market_cap_list[:200]
+
+def get_industry_percentage_list(date):
+    industry_percentage_list = list()
+    for i in all_rank_list:
+        if i[0] == date:
+            i200 = i[1:201]
+            for j in industry_list[1:]:
+                count = 0
+                for i2 in i200:
+                    if j == i2[2]:
+                        count += 1                       
+                industry_percentage_list.append(count)                    
+    return industry_percentage_list
 
 def get_industry_market_cap_list():
     industry_market_cap_list = list()
@@ -61,11 +74,11 @@ def get_industry_market_cap_list():
         industry_market_cap_list.append(tmp)        
     return industry_market_cap_list
 
-
 date_max = get_date(str(all_rank_list[0][0]))
 today = datetime.datetime.now().strftime("%Y/%m/%d")
-industry_list = ['全部', '資訊硬體', '電商', '網路服務', '軟體', '半導體', '電信', '通訊設備', '材料', '工業', '電子', '機電設備', '資訊服務', '儲存']
+industry_list = ['全部', '資訊硬體', '電商', '網路服務', '軟體', '半導體', '電信', '通訊設備', '材料', '工業', '電子', '機電設備', '資訊服務', '儲存', '保全系統', '電子通路']
 date_list = get_date_list()
+industry_percentage_list = get_industry_percentage_list(today)
 season_list = date_list[::(len(date_list) // 4)][:4]
 industry_market_cap_list = get_industry_market_cap_list()
 
@@ -81,9 +94,10 @@ def index():
         date_list = date_list,
         rank_list = rank_list,
         industry = industry,
-        industry_list = industry_list,
+        industry_list = industry_list[1:],
         company_name_list = company_name_list,
         market_cap_list = market_cap_list,
+        industry_percentage_list = industry_percentage_list,
         industry_market_cap_list = industry_market_cap_list,
         season_list = season_list,
         )
@@ -102,9 +116,10 @@ def query():
         date_list = date_list,
         rank_list = rank_list,
         industry = industry,
-        industry_list = industry_list,
+        industry_list = industry_list[1:],
         company_name_list = company_name_list,
         market_cap_list = market_cap_list,
+        industry_percentage_list = industry_percentage_list,
         industry_market_cap_list = industry_market_cap_list,
         season_list = season_list,
         )
