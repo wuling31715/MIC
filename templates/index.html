@@ -279,7 +279,7 @@
     {% for i in season_list[::-1] %}
         season_array.push('{{ i }}');
     {% endfor %}
-    {% for i in industry_list %}
+    {% for i in industry_list[1:] %}
         industry_array.push('{{ i }}');
     {% endfor %}
     {% for i in industry_percentage_list %}

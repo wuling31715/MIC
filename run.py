@@ -16,7 +16,6 @@ def get_date_list():
         all_rank_list[i][0] = get_date(str(j[0]))    
     return date_list
 
-
 def get_rank_list(date, industry):
     rank_list = list()
     if industry == '全部':
@@ -94,7 +93,7 @@ def index():
         date_list = date_list,
         rank_list = rank_list,
         industry = industry,
-        industry_list = industry_list[1:],
+        industry_list = industry_list,
         company_name_list = company_name_list,
         market_cap_list = market_cap_list,
         industry_percentage_list = industry_percentage_list,
@@ -116,7 +115,7 @@ def query():
         date_list = date_list,
         rank_list = rank_list,
         industry = industry,
-        industry_list = industry_list[1:],
+        industry_list = industry_list,
         company_name_list = company_name_list,
         market_cap_list = market_cap_list,
         industry_percentage_list = industry_percentage_list,
