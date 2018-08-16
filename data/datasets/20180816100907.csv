@@ -1,0 +1,216 @@
+rank,name,industry,exchange,code,rate,market_cap
+1,Apple,資訊硬體, - Apple Inc. (NASDAQ),USD,1.0,102000000000000
+2,Amazon.com,電商," - Amazon.com, Inc. (NASDAQ)",USD,1.0,90815100000000
+3,Alphabet,網路服務, - Alphabet Inc Class A (NASDAQ),USD,1.0,84835800000000
+4,Microsoft,軟體, - Microsoft Corporation (NASDAQ),USD,1.0,82561600000000
+5,Facebook,網路服務," - Facebook, Inc. Common Stock (NASDAQ)",USD,1.0,52248800000000
+6,Alibaba,電商, - Alibaba Group Holding Ltd (NYSE),USD,1.0,43956200000000
+7,Tencent Holdings,網路服務, - 騰訊 (HKG),HKD,0.1274,39748800000000
+8,Samsung Electronics,半導體, - Samsung Electronics Co Ltd (KRX),KRW,0.0009,28342800000000
+9,AT&T,電信, - AT&T Inc. (NYSE),USD,1.0,23839700000000
+10,Verizon Communications,電信, - Verizon Communications Inc. (NYSE),USD,1.0,21959900000000
+11,Intel,半導體, - Intel Corporation (NASDAQ),USD,1.0,21794700000000
+12,Cisco Systems,通訊設備," - Cisco Systems, Inc. (NASDAQ)",USD,1.0,20838700000000
+13,Taiwan Semiconductor,半導體, - 台灣積體電路製造 (TPE),TWD,0.03241251,19998518670000
+14,Oracle,軟體, - Oracle Corporation (NYSE),USD,1.0,19178600000000
+15,China Mobile,電信, - 中國移動 (HKG),HKD,0.1274,18982600000000
+16,NVIDIA,半導體, - NVIDIA Corporation (NASDAQ),USD,1.0,15623400000000
+17,Netflix,網路服務," - Netflix, Inc. (NASDAQ)",USD,1.0,14174300000000
+18,SAP,軟體, - SAP SE (ETR),EUR,1.1321,13853507700000
+19,International Business Machines,資訊服務, - IBM Common Stock (NYSE),USD,1.0,13342100000000
+20,3M,材料, - 3M Co (NYSE),USD,1.0,12260700000000
+21,Adobe Systems,軟體, - Adobe Systems Incorporated (NASDAQ),USD,1.0,12102300000000
+22,Honeywell International,工業, - Honeywell International Inc. (NYSE),USD,1.0,11575400000000
+23,General Electric,工業, - General Electric Company (NYSE),USD,1.0,10926100000000
+24,Accenture,資訊服務, - Accenture Plc (NYSE),USD,1.0,10786200000000
+25,Tata Consultancy Services,資訊服務, - Tata Consultancy Services Limited (NSE),INR,0.0143,10767900000000
+26,Texas Instruments,半導體, - Texas Instruments Incorporated (NASDAQ),USD,1.0,10759900000000
+27,Siemens,工業, - Siemens AG (ETR),EUR,1.1321,10644909880000
+28,Salesforce.com,網路服務," - salesforce.com, inc. (NYSE)",USD,1.0,10603500000000
+29,Booking Holdings,網路服務, - Booking Holdings Inc (NASDAQ),USD,1.0,10012500000000
+30,Nippon Telegraph & Tel,電信, - Nippon Telegraph And Telephone Corp (TYO),JPY,0.009,9918000000000
+31,Softbank,電信, - SoftBank Group Corp (TYO),JPY,0.009,9909000000000
+32,Qualcomm,半導體," - QUALCOMM, Inc. (NASDAQ)",USD,1.0,9698500000000
+33,Broadcom,半導體, - Broadcom Inc (NASDAQ),USD,1.0,8948700000000
+34,ASML Holding,半導體, - ASML Holding NV (EPA),EUR,1.1321,8489617900000
+35,Baidu,網路服務, - Baidu Inc (ADR) (NASDAQ),USD,1.0,8068100000000
+36,Deutsche Telekom,電信, - Deutsche Telekom AG (ETR),EUR,1.1321,7490200020000
+37,KDDI,電信, - KDDI Corp (TYO),JPY,0.009,7145999999999
+38,Sony,資訊硬體, - Sony Corp (TYO),JPY,0.009,6704999999999
+39,Keyence,電子, - KEYENCE CORPORATION (TYO),JPY,0.009,6506999999999
+40,Automatic Data Processing,資訊服務, - Automatic Data Processing (NASDAQ),USD,1.0,6333600000000
+41,VMware,軟體," - VMware, Inc. (NYSE)",USD,1.0,6186400000000
+42,Vodafone,電信, - Vodafone Group plc (LON),GBP,1.2702,5991787440000
+43,Micron Technology,半導體," - Micron Technology, Inc. (NASDAQ)",USD,1.0,5560600000000
+44,Altaba,網路服務, - Altaba Inc (NASDAQ),USD,1.0,5503400000000
+45,America Movil,電信, - America Movil SAB de CV (BMV),MXN,0.0522,5481000000000
+46,Intuit,軟體, - Intuit Inc. (NASDAQ),USD,1.0,5374200000000
+47,Applied Materials,半導體," - Applied Materials, Inc. (NASDAQ)",USD,1.0,4855100000000
+48,SK Hynix,半導體, - SK Hynix Inc (KRX),KRW,0.0009,4812300000000
+49,ABB,工業, - ABB Ltd. (SWX),CHF,1.0028,4789773920000
+50,Emerson Electric,機電設備, - Emerson Electric Co. (NYSE),USD,1.0,4698600000000
+51,Crown Castle International,電信, - CROWN CASTLE In/SH SH (NYSE),USD,1.0,4615100000000
+52,JD.com,電商, - JD.Com Inc(ADR) (NASDAQ),USD,1.0,4587700000000
+53,Hon Hai Precision,資訊硬體, - 鴻海精密 (TPE),TWD,0.03241251,4537751400000
+54,Infosys,資訊服務, - Infosys Ltd (NSE),INR,0.0143,4418700000000
+55,Schneider Electric,機電設備, - Schneider Electric SE (EPA),EUR,1.1321,4410548390000
+56,Telefónica,電信, - Telefonica SA (BME),EUR,1.1321,4350207460000
+57,Hikvision,電子, - 海康威視 (SHE),CNY,0.1446,4345591500000
+58,Orange,電信, - Orange SA (EPA),EUR,1.1321,4265413170000
+59,Saudi Telecom,電信, - Saudi Telecom Company SJSC (TADAWUL),SAR,0.26663597,4237352171643
+60,Nidec,機電設備, - NIDEC CORPORATION (TYO),JPY,0.009,4067999999999
+61,Philips,工業, - Koninklijke Philips NV (EPA),EUR,1.1321,3931670090000
+62,Dassault Systemes,軟體, - Dassault Systemes SE (EPA),EUR,1.1321,3913103650000
+63,HP,資訊硬體, - HP Inc (NYSE),USD,1.0,3881800000000
+64,Axiata Group,電信, - Axiata Group Bhd (KLSE),,1.0,3856600000000
+65,BCE,電信, - BCE Inc. (USA) (TSE),CAD,0.7632,3728232000000
+66,Amadeus IT Group,軟體, - Amadeus It Group SA (BME),EUR,1.1321,3707740710000
+67,China Telecom,電信, - 中國電信股份有限公司 (HKG),HKD,0.1274,3649538620000
+68,China Unicom,電信, - 中國聯通 (HKG),HKD,0.1274,3573391640000
+69,Murata Manufacturing,電子," - Murata Manufacturing Co., Ltd. (TYO)",JPY,0.009,3545999999999
+70,Ericsson,通訊設備, - ERICSSON/SH B (CPH),DKK,0.1518,3528499920000
+71,Analog Devices,半導體," - Analog Devices, Inc. (NASDAQ)",USD,1.0,3481200000000
+72,Equinix,資訊服務, - Equinix Inc (NASDAQ),USD,1.0,3450800000000
+73,eBay,電商, - eBay Inc (NASDAQ),USD,1.0,3387100000000
+74,TE Connectivity,電子, - TE Connectivity Ltd (NYSE),USD,1.0,3270600000000
+75,Fiserv,軟體, - Fiserv Inc (NASDAQ),USD,1.0,3253800000000
+76,ServiceNow,軟體, - ServiceNow Inc (NYSE),USD,1.0,3192500000000
+77,Hitachi,電子," - Hitachi, Ltd. (TYO)",JPY,0.009,3186000000000
+78,Vivendi,電信, - Vivendi SA (EPA),EUR,1.1321,3161955300000
+79,Telenor,電信, - Telenor ASA (ADR) (OTCMKTS),,1.0,3161300000000
+80,NXP Semiconductors,半導體, - NXP Semiconductors NV (NASDAQ),USD,1.0,3103800000000
+81,Panasonic,資訊硬體, - Panasonic Corporation (TYO),JPY,0.009,3006000000000
+82,Workday,軟體, - Workday Inc (NASDAQ),USD,1.0,2950600000000
+83,Lam Research,半導體, - Lam Research Corporation (NASDAQ),USD,1.0,2901400000000
+84,Autodesk,軟體," - Autodesk, Inc. (NASDAQ)",USD,1.0,2900300000000
+85,BT Group,電信, - BT Group - CLASS A Common Stock (LON),GBP,1.2702,2837753820000
+86,Amphenol,電子, - Amphenol Corporation (NYSE),USD,1.0,2835300000000
+87,Infineon Technologies,半導體, - Infineon Technologies AG (ETR),EUR,1.1321,2816325170000
+88,Mitsubishi Electric,機電設備, - Mitsubishi Electric Corporation (TYO),JPY,0.009,2808000000000
+89,Tokyo Electron,半導體, - Tokyo Electron Ltd (TYO),JPY,0.009,2754000000000
+90,Teliasonera,電信, - Telia Company AB (CPH),DKK,0.1518,2748217560000
+91,Corning,材料, - Corning Incorporated (NYSE),USD,1.0,2710700000000
+92,Chunghwa Telecom,電信, - 中華電信 (TPE),TWD,0.03241251,2677817856168
+93,Netease,網路服務, - NetEase Inc (ADR) (NASDAQ),USD,1.0,2627800000000
+94,Telstra,電信, - Telstra Corporation Ltd (ASX),AUD,0.7225,2616533750000
+95,Red Hat,軟體, - Red Hat Inc (NYSE),USD,1.0,2465500000000
+96,CenturyLink,電信, - Centurylink Inc (NYSE),USD,1.0,2450300000000
+97,Hewlett Packard Enterprise,資訊硬體, - Hewlett Packard Enterprise Co (NYSE),USD,1.0,2425300000000
+98,Swisscom,電信, - Swisscom AG (SWX),CHF,1.0028,2379644400000
+99,Kyocera,電子, - Kyocera Corp (TYO),JPY,0.009,2250000000000
+100,Naver,網路服務, - Naver Corp (KRX),KRW,0.0009,2186100000000
+101,Capgemini,資訊服務, - Capgemini SE (EPA),EUR,1.1321,2151895680000
+102,NetApp,儲存, - NetApp Inc. (NASDAQ),USD,1.0,2144400000000
+103,Best Buy,電商, - Best Buy Co Inc (NYSE),USD,1.0,2138300000000
+104,Bharti Airtel,電信, - Bharti Airtel Limited (NSE),INR,0.0143,2130700000000
+105,Focus Media Information Technology,資訊硬體, - 分眾傳媒 (SHE),CNY,0.1446,2128454160000
+106,Fujifilm Holdings,資訊硬體, - FUJIFILM Holdings Corp (TYO),JPY,0.009,2114999999999
+107,Agilent Technologies,電子, - Agilent Technologies Inc (NYSE),USD,1.0,2104800000000
+108,TELUS,電信, - TELUS Corporation (USA) (TSE),CAD,0.7632,2066135040000
+109,LARGAN Precision,電子, - 大立光電 (TPE),TWD,0.03241251,2021866443792
+110,HCL Technologies,軟體, - HCL Technologies Ltd (NSE),INR,0.0143,1959100000000
+111,Harris,通訊設備, - Harris Corporation (NYSE),USD,1.0,1944900000000
+112,SK Telecom,電信, - SK Telecom Co Ltd (KRX),KRW,0.0009,1944000000000
+113,Western Digital,儲存, - Western Digital Corp (NASDAQ),USD,1.0,1939100000000
+114,Microchip Technology,半導體, - Microchip Technology Inc. (NASDAQ),USD,1.0,1935300000000
+115,Toshiba,電子, - Toshiba Corp (TYO),JPY,0.009,1898999999999
+116,Advanced Micro Devices,半導體," - Advanced Micro Devices, Inc. (NASDAQ)",USD,1.0,1894100000000
+117,Dell Technologies,資訊硬體, - Dell Technologies Inc (NYSE),USD,1.0,1883400000000
+118,Legrand,機電設備, - Legrand SA (EPA),EUR,1.1321,1871021670000
+119,BOE Technology Group,電子, - 京東方A (SHE),CNY,0.1446,1857141180000
+120,VeriSign,軟體," - Verisign, Inc. (NASDAQ)",USD,1.0,1852800000000
+121,Wipro,資訊服務, - Wipro Limited (NSE),INR,0.0143,1844700000000
+122,CA,軟體," - CA, Inc. (NASDAQ)",USD,1.0,1838100000000
+123,Secom,保全系統, - Secom Co Ltd (TYO),JPY,0.009,1835999999999
+124,Check Point Software,軟體, - Check Point Software Technologies Ltd. (NASDAQ),USD,1.0,1821800000000
+125,Xilinx,半導體," - Xilinx, Inc. (NASDAQ)",USD,1.0,1809200000000
+126,SBA Communications,電信, - SBA Communications Corporation (NASDAQ),USD,1.0,1777800000000
+127,KLA-Tencor,半導體, - KLA-Tencor Corp (NASDAQ),USD,1.0,1768100000000
+128,Ametek,機電設備," - AMETEK, Inc. (NYSE)",USD,1.0,1761300000000
+129,Advanced Info Service,電信, - Advanced Info Service PCL (BKK),THB,0.03,1708962000000
+130,Maxim Integrated Products,半導體, - Maxim Integrated Products Inc. (NASDAQ),USD,1.0,1702600000000
+131,Skyworks Solutions,半導體, - Skyworks Solutions Inc (NASDAQ),USD,1.0,1638600000000
+132,Samsung SDS,資訊服務, - Samsung SDS Co Ltd (KRX),KRW,0.0009,1575900000000
+133,Snap,軟體, - Snap Inc (NYSE),USD,1.0,1561800000000
+134,Citrix Systems,軟體," - Citrix Systems, Inc. (NASDAQ)",USD,1.0,1509800000000
+135,Seagate Technology,儲存, - Seagate Technology PLC (NASDAQ),USD,1.0,1505400000000
+136,Sharp,資訊硬體, - Sharp Corporation (TYO),JPY,0.009,1485000000000
+137,Liberty Broadband,電信, - Liberty Broadband Corp Series A (NASDAQ),USD,1.0,1437900000000
+138,Telecom Italia,電信, - Telecom Italia SpA (BIT),EUR,1.1321,1431993290000
+139,Fujitsu,資訊硬體, - Fujitsu Ltd (TYO),JPY,0.009,1431000000000
+140,Olympus,資訊硬體, - Olympus Corp (TYO),JPY,0.009,1386000000000
+141,Samsung SDI,電子, - Samsung SDI Co Ltd (KRX),KRW,0.0009,1355400000000
+142,AAC Technologies Holdings,電子, - 瑞聲科技 (HKG),HKD,0.1274,1336464220000
+143,CDW,軟體, - CDW common stock (NASDAQ),USD,1.0,1296500000000
+144,MTN Group,電信, - MTN Group Limited (JSE),ZAR,0.0683,1292352110000
+145,Akamai Technologies,資訊服務," - Akamai Technologies, Inc. (NASDAQ)",USD,1.0,1285200000000
+146,TDK,電子, - TDK Corp (TYO),JPY,0.009,1260000000000
+147,Renesas Electronics,半導體, - Renesas Electronics Corporation (TYO),JPY,0.009,1233000000000
+148,Garmin,資訊硬體, - Garmin Ltd. (NASDAQ),USD,1.0,1220500000000
+149,Mediatek,半導體, - 聯發科技 (TPE),TWD,0.03241251,1181980519668
+150,Taiwan Mobile,電信, - 台灣大哥大 (TPE),TWD,0.03241251,1158724543743
+151,Nomura Research Institute,資訊服務, - Nomura Research Institute Ltd (TYO),JPY,0.009,1152000000000
+152,Symantec,軟體, - Symantec Corporation (NASDAQ),USD,1.0,1141100000000
+153,KPN,電信, - Koninklijke KPN N.V. (EPA),EUR,1.1321,1113420350000
+154,LG Electronics,資訊硬體, - LG Electronics Inc. (KRX),KRW,0.0009,1111500000000
+155,Liberty Interactive,電商, - Qurate Retail Inc Series A (NASDAQ),USD,1.0,1041200000000
+156,Open Text,軟體, - Open Text Corp (USA) (NASDAQ),USD,1.0,1030500000000
+157,Rakuten,電商, - Rakuten Inc (TYO),JPY,0.009,1007999999999
+158,ZTE,通訊設備, - 中興通訊 (SHE),CNY,0.1446,953680380000
+159,Juniper Networks,通訊設備," - Juniper Networks, Inc. (NYSE)",USD,1.0,951900000000
+160,Amdocs,軟體, - Amdocs Limited (NASDAQ),USD,1.0,950000000000
+161,OMRON,電子, - OMRON Corporation (TYO),JPY,0.009,926999999999
+162,Delta Electronics,電子, - 台達電子 (TPE),TWD,0.03241251,867462487632
+163,Proximus,電信, - Proximus NV (EPA),EUR,1.1321,774469610000
+164,Flextronics International,電子, - Flex Ltd (NASDAQ),USD,1.0,706500000000
+165,NEC,電子, - NEC Corp (TYO),JPY,0.009,697417200000
+166,LG Display,電子, - LG Display Co Ltd (KRX),KRW,0.0009,696600000000
+167,Legend Holding,資訊硬體, - 聯想控股 (HKG),HKD,0.1274,696444840000
+168,Lenovo Group,資訊硬體, - 聯想集團 (HKG),HKD,0.1274,695973460000
+169,KT Corp,電信, - KT Corp (KRX),KRW,0.0009,686700000000
+170,Arrow Electronics,電子," - Arrow Electronics, Inc. (NYSE)",USD,1.0,668200000000
+171,Quanta Computer,資訊硬體, - 廣達電腦 (TPE),TWD,0.03241251,639884531169
+172,LG Uplus,電信, - LG Uplus Corp (KRX),KRW,0.0009,633600000000
+173,China Railway Signal & Communication Corporation,機電設備, - 中國鐵路通信信號股份有限公司 (HKG),HKD,0.1274,620348820000
+174,Asustek Computer,資訊硬體, - 華碩 (TPE),TWD,0.03241251,578219730894
+175,TCL Corp,資訊硬體, - TCL集團 (SHE),CNY,0.1446,571025400000
+176,Pegatron,資訊硬體, - 和碩聯合科技 (TPE),TWD,0.03241251,565705260783
+177,Avnet,電子," - Avnet, Inc. (NASDAQ)",USD,1.0,546700000000
+178,G4S,保全系統, - G4S plc (LON),GBP,1.2702,488899980000
+179,Konica Minolta Business Solutions,資訊硬體, - Konica Minolta Inc (TYO),JPY,0.009,481804199999
+180,Jabil Circuit,電子, - Jabil Inc (NYSE),USD,1.0,465400000000
+181,Yamada Denki,電子通路, - Yamada Denki Co Ltd (TYO),JPY,0.009,464494499999
+182,VEON,電信, - VEON Ltd (ADR) (NASDAQ),USD,1.0,458000000000
+183,China Communications Services,電信, - 中國通信服務股份有限公司 (HKG),HKD,0.1274,446052880000
+184,Tsinghua Tongfang,資訊服務, - 清華同方 (SHA),CNY,0.1446,404764320000
+185,SYNNEX,資訊服務, - SYNNEX Corporation (NYSE),USD,1.0,381600000000
+186,Nokia,通訊設備, - Nokia Oyj (CPH),DKK,0.1518,381549300000
+187,Turkcell,電信, - Turkcell Iletisim Hizmetleri A.S. (IST),TRY,0.1632,375474240000
+188,Innolux,電子, - 群創光電 (TPE),TWD,0.03241251,356378788701
+189,Tech Data,電子, - Tech Data Corp (NASDAQ),USD,1.0,327700000000
+190,中國長城科技,資訊硬體, - 中國長城 (SHE),CNY,0.1446,326897220000
+191,Inventec,資訊硬體, - 英業達集團 (TPE),TWD,0.03241251,295371962379
+192,Intelsat,電信, - Intelsat SA (NYSE),USD,1.0,247800000000
+193,WPG Holdings,電子通路, - 大聯大投資控股股份有限公司 (TPE),TWD,0.03241251,236076516585
+194,Wistron,資訊硬體, - 緯創資通 (TPE),TWD,0.03241251,202986585126
+195,Frontier Communications,電信, - Frontier Communications Corp (NASDAQ),USD,1.0,43300000000
+196,ATOS,資訊服務, - Atossa Genetics Inc (NASDAQ),USD,1.0,548760000
+197,Expedia,網路服務, - Expedia Group Inc (NASDAQ),USD,1.0,1558708
+198,AU Optronics,電子, - AU Optronics Corp (ADR) (NYSE),USD,1.0,895780
+199,F5 Networks,資訊服務," - F5 Networks, Inc. (NASDAQ)",USD,1.0,648670
+200,Rogers Communications,電信, - Rogers Communications Inc. (USA) Class B (TSE),CAD,0.7632,565678
+201,CGI Group,資訊服務, - CGI (TSE),CAD,0.7632,374027
+202,SingTel,電信, - SINGAPORE TELEC/S ADR (OTCMKTS),,1.0,41991
+203,Sistema,電信,,,1.0,0
+204,Synnex Technology Intl,電子通路,,,1.0,0
+205,Compal Electronics,資訊硬體,,,1.0,0
+206,Etisalat,電信,,,1.0,0
+207,Emirates Integrated Telecom,電信,,,1.0,0
+208,Altice,電信,,,1.0,0
+209,Nanya Technology,半導體,,,1.0,0
+210,Level 3 Communications,電信,,,1.0,0
+211,STMicroelectronics,半導體,,,1.0,0
+212,Maxis,電信,,,1.0,0
+213,Advanced Semiconductor,半導體,,,1.0,0
+214,Ooredoo Telecom,電信,,,1.0,0
+215,Telkom Indonesia,電信,,,1.0,0
